@@ -61,6 +61,30 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
+  /* #General Styling & Shared Classes */
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+/* =================================================== */
+/* KODE BARU: Bikin semua teks paragraf/isi jadi Justify */
+/* =================================================== */
+p, li, span, .description {
+  text-align: justify;
+}
+
+/* Pengecualian agar Judul tetap rapi & tidak renggang */
+h1, h2, h3, h4, h5, h6 {
+  text-align: left;
+}
+
+/* Pengecualian untuk elemen yang harus rata tengah */
+.text-center, .section-title, .footer {
+  text-align: center;
+}
+/* =================================================== */
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
@@ -2014,5 +2038,250 @@ section,
 .news-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+}
+/* ==========================================================================
+   TEMA BARU STRUKTUR ORGANISASI (BACKGROUND PUTIH & HIJAU LOGO)
+   ========================================================================== */
+
+/* Pembungkus Utama (Background Putih) */
+.org-chart-wrapper-light {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0;
+}
+
+/* Node Direktur Utama (Hijau Logo Dominan + Gradasi Teal) */
+.org-node-light.main-node {
+  background: linear-gradient(135deg, #7aa732, #92c83e);
+  color: #ffffff !important;
+  border: 2px solid #00728f;
+  box-shadow: 0 4px 15px rgba(146, 200, 62, 0.35);
+}
+
+/* Node Sub (Direktur & Plant Manager) */
+.org-node-light.sub-node {
+  background: #f4f9eb;
+  color: #2d4710 !important;
+  border: 1.5px solid #92c83e;
+  font-weight: 700;
+}
+
+/* Garis Penghubung (Warna Hijau & Teal) */
+.org-line-v-light {
+  width: 2px;
+  height: 24px;
+  background-color: #92c83e;
+  margin: 0 auto;
+}
+
+/* Kartu Departemen (Background Putih Tipis / Border Hijau) */
+.dept-card-light {
+  background: #f8faf5;
+  border: 1.5px solid #d0e7a2;
+  border-radius: 16px;
+  padding: 16px 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dept-card-light:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(146, 200, 62, 0.2) !important;
+  border-color: #92c83e;
+}
+
+/* Judul Departemen (Hijau Segar) */
+.dept-title-light {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #00728f;
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #e0f0c2;
+}
+
+/* Box Manager & Supervisor (Dominan Hijau) */
+.dept-node-box-light {
+  background: #ffffff;
+  border: 1px solid #b6df6e;
+  border-radius: 8px;
+  padding: 8px 10px;
+  width: 100%;
+  color: #2d4710;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Pill Paling Bawah (Hijau Pekat Logo) */
+.dept-node-pill-light {
+  background: #7aa732;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Garis Konektor Antar Box */
+.dept-connector-light {
+  width: 2px;
+  height: 14px;
+  background-color: #92c83e;
+  margin: 0 auto;
+}
+/* ==========================================================================
+   PERFECT SEMANTIC TREE ORG CHART (DENGAN JUDUL CENTER & SCROLL KIRI PAS)
+   ========================================================================== */
+
+/* Outer Wrapper (Judul tetap di tengah, area bawah bisa di-scroll) */
+.org-tree-outer-wrapper {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.org-tree-outer-wrapper h3 {
+  color: #00728f;
+  text-align: center !important;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Scroll Container (Scrollbar mulai dari paling kiri) */
+.org-tree-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+}
+
+/* Inner Tree (Bisa melebar penuh tanpa memotong sisi kiri) */
+.tree {
+  display: inline-block;
+  min-width: 1800px; /* Menjaga jarak ideal 11 cabang agar tidak terhimpit */
+  padding: 10px 30px 0 30px;
+  text-align: center;
+}
+
+.tree, .tree ul, .tree li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tree ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.tree li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 8px 0 8px;
+  float: left;
+  text-align: center;
+}
+
+/* --- SYSTEM GARIS CABANG OTOMATIS PRESI --- */
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #7aa732;
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #7aa732;
+}
+
+/* Menghapus Garis Lebih di Ujung Kiri dan Kanan */
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+.tree li:last-child::before {
+  border-right: 2px solid #7aa732;
+  border-radius: 0 6px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 6px 0 0 0;
+}
+
+/* Garis Masuk ke Anak Bawah */
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #7aa732;
+  width: 0;
+  height: 20px;
+}
+
+/* Style Box Node Jabatan */
+.tree .node {
+  display: inline-block;
+  border: 2px solid #7aa732;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #2d4710;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(122, 167, 50, 0.12);
+  min-width: 125px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Direktur Utama (Top Node) */
+.tree .node.top-root {
+  background: #7aa732;
+  color: #ffffff;
+  border-color: #00728f;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+}
+
+/* Label Bawah / Pill */
+.tree .node.pill {
+  background: #f4f9eb;
+  border: 1.5px solid #92c83e;
+  color: #2d4710;
+  font-size: 0.78rem;
+}
+
+/* Garis Vertikal Lurus untuk Manager -> SPV -> Label */
+.node-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-v-down {
+  width: 2px;
+  height: 18px;
+  background-color: #7aa732;
 }
 </style>

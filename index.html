@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - PT Hydrocolloid Indonesia</title>
+  <title>PT Hydrocolloid Indonesia</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/hydro logo.png" rel="icon">
+  <link href="assets/img/hydro logo.png" rel="hydro logo">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -1013,222 +1013,178 @@
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up">
-<!-- BAGIAN STRUKTUR ORGANISASI CHART -->
-<div class="org-chart-wrapper mb-5 p-4 p-lg-5 rounded-4 shadow-lg bg-dark text-white">
-  <h3 class="text-center fw-bold mb-5 text-white fs-3 tracking-wide">STRUKTUR ORGANISASI</h3>
+<!-- STRUKTUR ORGANISASI PERBAIKAN TOTAL -->
+<div class="org-tree-outer-wrapper rounded-4 shadow-sm my-4">
   
-  <div class="org-tree d-flex flex-column align-items-center">
-    
-    <!-- Level 1: Direktur Utama -->
-    <div class="org-node main-node">
-      <i class="bi bi-person-badge fs-5 me-2 text-info"></i>
-      <span>Direktur Utama</span>
+  <!-- Judul Terkunci di Tengah Layar -->
+  <h3 class="fw-bold text-center">STRUKTUR ORGANISASI</h3>
+  
+  <!-- Container Chart yang Bisa Di-scroll Mulus dari Ujung Kiri -->
+  <div class="org-tree-scroll-container">
+    <div class="tree">
+      <ul>
+        <li>
+          <!-- Level 1: Direktur Utama -->
+          <div class="node top-root">Direktur Utama</div>
+          
+          <ul>
+            <li><div class="node">Direktur</div></li>
+            <li><div class="node">Direktur</div></li>
+          </ul>
+
+          <ul>
+            <li>
+              <!-- Level 3: Plant Manager -->
+              <div class="node">Plant Manager</div>
+              
+              <!-- Level 4: 11 DEPARTEMEN UTAMA -->
+              <ul>
+                
+                <!-- 1. Produksi -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Produksi</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Produksi</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Produksi</div>
+                  </div>
+                </li>
+
+                <!-- 2. Exim & Logistik -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Perijinan<br>Exim & Logistic</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Perijinan<br>Exim & Logistic</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Perijinan Exim &<br>Logistic</div>
+                  </div>
+                </li>
+
+                <!-- 3. Procurement -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Procurement</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Procurement</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Procurement</div>
+                  </div>
+                </li>
+
+                <!-- 4. PPIC & Warehouse (Bercabang 2) -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager PPIC & Warehouse</div>
+                  </div>
+                  <ul>
+                    <li>
+                      <div class="node-stack">
+                        <div class="node">Supervisor PPIC</div>
+                        <div class="line-v-down"></div>
+                        <div class="node pill">PPIC</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="node-stack">
+                        <div class="node">Supervisor Warehouse</div>
+                        <div class="line-v-down"></div>
+                        <div class="node pill">Warehouse</div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- 5. Gudang Bali -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Gudang Bali</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Gudang Bali</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Gudang Bali</div>
+                  </div>
+                </li>
+
+                <!-- 6. R&D + QC -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager R&D + QC</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor R&D + QC</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">R&D + QC</div>
+                  </div>
+                </li>
+
+                <!-- 7. Engineering -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Engineering</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Engineering</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Engineering</div>
+                  </div>
+                </li>
+
+                <!-- 8. IT -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager IT</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor IT</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">IT</div>
+                  </div>
+                </li>
+
+                <!-- 9. Finance, Accounting & General Purchasing (Bercabang 3) -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Finance, Accounting<br>& General Purchasing</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Finance, Accounting<br>& General Purchasing</div>
+                  </div>
+                  <ul>
+                    <li><div class="node pill">Finance</div></li>
+                    <li><div class="node pill">Accounting</div></li>
+                    <li><div class="node pill">General Purchasing</div></li>
+                  </ul>
+                </li>
+
+                <!-- 10. Sales & Marketing -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Sales &<br>Marketing</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Sales &<br>Marketing</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Sales & Marketing</div>
+                  </div>
+                </li>
+
+                <!-- 11. Umum & Personalia -->
+                <li>
+                  <div class="node-stack">
+                    <div class="node">Manager Umum &<br>Personalia</div>
+                    <div class="line-v-down"></div>
+                    <div class="node">Supervisor Umum &<br>Personalia</div>
+                    <div class="line-v-down"></div>
+                    <div class="node pill">Umum & Personalia</div>
+                  </div>
+                </li>
+
+              </ul><!-- End 11 Departemen -->
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-
-    <!-- Line Vertical -->
-    <div class="org-line-v"></div>
-
-    <!-- Level 2: Direktur (2 Orang) -->
-    <div class="d-flex gap-3 position-relative">
-      <div class="org-node sub-node">
-        <i class="bi bi-briefcase fs-6 me-2 text-info"></i>
-        <span>Direktur</span>
-      </div>
-      <div class="org-node sub-node">
-        <i class="bi bi-briefcase fs-6 me-2 text-info"></i>
-        <span>Direktur</span>
-      </div>
-    </div>
-
-    <!-- Line Vertical -->
-    <div class="org-line-v"></div>
-
-    <!-- Level 3: Plant Manager -->
-    <div class="org-node sub-node">
-      <i class="bi bi-diagram-3 fs-6 me-2 text-info"></i>
-      <span>Plan Manager</span>
-    </div>
-
-    <!-- Line Vertical -->
-    <div class="org-line-v mb-4"></div>
-
-    <!-- Level 4: 4 Departemen Utama -->
-    <div class="row g-4 w-100">
-      
-      <!-- Dept 1: Produksi -->
-      <div class="col-lg-3 col-md-6">
-        <div class="dept-card">
-          <div class="dept-title">
-            <i class="bi bi-gear-fill me-2 text-info"></i> Produksi
-          </div>
-          <div class="dept-node-box">
-            <i class="bi bi-phone me-2 text-info"></i> Manager Produksi
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-box">
-            <i class="bi bi-person me-2 text-info"></i> Supervisor Produksi
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-pill">
-            <i class="bi bi-people me-1"></i> Produksi
-          </div>
-        </div>
-      </div>
-
-      <!-- Dept 2: Exim & Logistik -->
-      <div class="col-lg-3 col-md-6">
-        <div class="dept-card">
-          <div class="dept-title">
-            <i class="bi bi-truck me-2 text-info"></i> Exim & Logistik
-          </div>
-          <div class="dept-node-box">
-            <i class="bi bi-phone me-2 text-info"></i> Manager Perijinan Exim & Logistik
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-box">
-            <i class="bi bi-person me-2 text-info"></i> Supervisor Perijinan Exim & Logistik
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-pill">
-            <i class="bi bi-people me-1"></i> Perijinan Exim & Logistik
-          </div>
-        </div>
-      </div>
-
-      <!-- Dept 3: Procurement -->
-      <div class="col-lg-3 col-md-6">
-        <div class="dept-card">
-          <div class="dept-title">
-            <i class="bi bi-cart3 me-2 text-info"></i> Procurement
-          </div>
-          <div class="dept-node-box">
-            <i class="bi bi-phone me-2 text-info"></i> Manager Procurement
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-box">
-            <i class="bi bi-person me-2 text-info"></i> Supervisor Procurement
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-pill">
-            <i class="bi bi-people me-1"></i> Procurement
-          </div>
-        </div>
-      </div>
-
-      <!-- Dept 4: PPIC & Warehouse -->
-      <div class="col-lg-3 col-md-6">
-        <div class="dept-card">
-          <div class="dept-title">
-            <i class="bi bi-clipboard-data me-2 text-info"></i> PPIC & Warehouse
-          </div>
-          <div class="dept-node-box">
-            <i class="bi bi-phone me-2 text-info"></i> Manager PPIC & Warehouse
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-box">
-            <i class="bi bi-person me-2 text-info"></i> Supervisor PPIC
-          </div>
-          <div class="dept-connector"></div>
-          <div class="dept-node-pill">
-            <i class="bi bi-person me-1"></i> Supervisor Warehouse
-          </div>
-        </div>
-      </div>
-
-    </div>
-
   </div>
+
 </div>
-
-
-<!-- BAGIAN PROFILE TEAM MEMBER -->
-<div class="team-profiles pt-4">
-  <h3 class="text-center fw-bold mb-4 text-dark fs-4">Profil Tim Eksekutif</h3>
-  
-  <div class="row gy-4">
-
-    <!-- 1. Direktur Utama -->
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-      <div class="team-member w-100 card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover">
-        <div class="member-img position-relative overflow-hidden">
-          <img src="assets/img/team/team-1.jpg" class="img-fluid w-100" alt="Direktur Utama">
-          <div class="social d-flex justify-content-center gap-2 position-absolute w-100 start-0 bottom-0 p-3">
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="member-info p-3 bg-white">
-          <h5 class="fw-bold text-dark mb-1">Dhawi</h5>
-          <span class="text-primary small fw-semibold">Direktur Utama</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. Direktur -->
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-      <div class="team-member w-100 card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover">
-        <div class="member-img position-relative overflow-hidden">
-          <img src="assets/img/team/team-2.jpg" class="img-fluid w-100" alt="Direktur">
-          <div class="social d-flex justify-content-center gap-2 position-absolute w-100 start-0 bottom-0 p-3">
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="member-info p-3 bg-white">
-          <h5 class="fw-bold text-dark mb-1">Siti</h5>
-          <span class="text-primary small fw-semibold">Direktur</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3. Direktur -->
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-      <div class="team-member w-100 card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover">
-        <div class="member-img position-relative overflow-hidden">
-          <img src="assets/img/team/team-3.jpg" class="img-fluid w-100" alt="Direktur">
-          <div class="social d-flex justify-content-center gap-2 position-absolute w-100 start-0 bottom-0 p-3">
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="member-info p-3 bg-white">
-          <h5 class="fw-bold text-dark mb-1">Alqhar</h5>
-          <span class="text-primary small fw-semibold">Direktur</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4. Plant Manager -->
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-      <div class="team-member w-100 card border-0 shadow-sm rounded-4 overflow-hidden text-center card-hover">
-        <div class="member-img position-relative overflow-hidden">
-          <img src="assets/img/team/team-4.jpg" class="img-fluid w-100" alt="Plant Manager">
-          <div class="social d-flex justify-content-center gap-2 position-absolute w-100 start-0 bottom-0 p-3">
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="btn btn-sm btn-light rounded-circle shadow-sm"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="member-info p-3 bg-white">
-          <h5 class="fw-bold text-dark mb-1">Zalza</h5>
-          <span class="text-primary small fw-semibold">Plan Manager</span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div><!-- End Team Profiles -->
-
-  </div>
-</section>
-
 
     <!-- Faq Section -->
   <!-- Faq Section -->
@@ -1240,7 +1196,7 @@
 
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="content px-xl-5">
-          <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+          <h3><span>Pertanyaan yang Sering</span><strong>Ditanyakan</strong></h3>
           <p>
             Temukan jawaban atas pertanyaan yang sering diajukan mengenai produk Semi Refined Carrageenan (SRC), standar kualitas, dan sistem pemesanan di PT Hydrocolloid Indonesia.
           </p>
