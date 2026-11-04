@@ -2292,4 +2292,110 @@ section,
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
 }
+/* ==========================================================================
+   KUSTOMISASI UKURAN HEADER (BIKIN LEBIH SLIM & COMPACT)
+   ========================================================================== */
+
+/* 1. Mengecilkan Topbar Paling Atas (Kontak & Sosial Media) */
+.header .topbar {
+  height: 32px !important; /* Tinggi bawaan 40px diturunkan jadi 32px */
+  font-size: 12px !important; /* Ukuran teks kontak mengecil halus */
+}
+
+/* 2. Mengecilkan Padding Branding Main Header (Area Logo & Nav) */
+.header .branding {
+  min-height: 45px !important; /* Bawaan 60px diturunkan jadi 45px */
+  padding: 5px 0 !important;   /* Jarak atas-bawah dikurangi dari 10px ke 5px */
+}
+
+/* 3. Mengecilkan Ukuran Logo Gambar */
+.header .logo img {
+  max-height: 50px !important; /* Ukuran gambar logo diturunkan dari 36px ke 28px */
+}
+
+/* 4. Jika Menggunakan Teks Logo H1 */
+.header .logo h1 {
+  font-size: 22px !important; /* Bawaan 30px mengecil jadi 22px */
+}
+
+/* 5. Mengecilkan Padding Menu Navigasi (Beranda, Tentang, Produk, dll) */
+@media (min-width: 1200px) {
+  .navmenu a, 
+  .navmenu a:focus {
+    padding: 10px 12px !important; /* Padding bawaan 18px 15px dipangkas */
+    font-size: 14px !important;    /* Ukuran font menu sedikit disesuaikan */
+  }
+}
+/* Sembunyikan Tombol Scroll Top secara permanen */
+.scroll-top, 
+#scroll-top {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+/* ==========================================================================
+   PENYESUAIAN OVERLAY HERO CAROUSEL (LEBIH GELAP & TEKS KONTRAS)
+   ========================================================================== */
+
+/* 1. Memberikan efek overlay gelap transparan di atas gambar */
+.hero .carousel-item::before {
+  content: "" !important;
+  background-color: rgba(0, 0, 0, 0.55) !important; /* Nilai transparansi gelap (0.55 - 0.7) */
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+}
+
+/* 2. Memastikan teks, subjudul, dan tombol tetap di atas overlay */
+.hero .info,
+.hero .info * {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* 3. Mengubah warna teks subjudul/paragraf menjadi putih bersih agar kontras */
+.hero .info p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 4. Mengubah warna judul H2 menjadi putih/terang dengan shadow halus */
+.hero .info h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Penyesuaian khusus jika ingin kata 'Karagenan' tetap berwarna hijau tosca */
+.hero .info h2 span {
+  color: #20c997 !important;
+  text-decoration: none !important;
+}
+/* ==========================================================================
+   MENGUBAH SEMUA WARNA JUDUL MENJADI BIRU TEAL KORPORAT
+   ========================================================================== */
+
+/* 1. Mengubah variabel warna global heading */
+:root {
+  --heading-color: #00728f !important;
+}
+
+/* 2. Memaksa semua elemen Heading (h1 - h6) menggunakan warna Biru Teal */
+h1, h2, h3, h4, h5, h6,
+.section-title h2,
+.section-title h3,
+.section-title strong {
+  color: #00728f !important;
+}
+
+/* 3. Pengecualian: Menjaga judul di dalam elemen berlatar belakang gelap (Footer & Banner CTA) tetap putih */
+.dark-background h1, 
+.dark-background h2, 
+.dark-background h3, 
+.dark-background h4, 
+.dark-background h5, 
+.dark-background h6,
+.footer h3,
+.call-to-action h3 {
+  color: #ffffff !important;
+}
 </style>
