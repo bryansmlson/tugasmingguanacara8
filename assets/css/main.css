@@ -2473,4 +2473,311 @@ h1, h2, h3, h4, h5, h6,
   color: #50d8af !important;
   text-decoration: none !important;
 }
+/* ==========================================================================
+   FIX HOVER EMAIL & KONTAK TOPBAR AGAR TIDAK MENGHILANG / JADI PUTIH
+   ========================================================================== */
+
+/* Mengubah warna hover email/kontak topbar menjadi warna aksen teal */
+.header .topbar .contact-info i a:hover,
+.header .topbar .contact-info a:hover {
+  color: #00728f !important; /* Warna biru-teal logo */
+  text-decoration: underline !important;
+}
+
+/* Memastikan ikon email/telp juga tetap terlihat terang saat hover */
+.header .topbar .contact-info i a:hover i {
+  color: #7aa732 !important; /* Warna hijau logo */
+}
+/* ==========================================================================
+   FIX KARTU BERITA & ACARA (TINGGI SERAGAM & MEMINDAHKAN TITIK SWIPER)
+   ========================================================================== */
+
+/* 1. Memaksa setiap item slide memiliki tinggi 100% yang seragam */
+.news-card,
+.news-section .card,
+.news-section .swiper-slide {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 2. Menyelaraskan ukuran gambar agar proporsional di semua kartu */
+.news-card img,
+.news-section .card img {
+  width: 100% !important;
+  height: 200px !important; /* Tinggi gambar dikunci sama rata */
+  object-fit: cover !important; /* Gambar tidak distorsi/gepeng */
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+/* 3. Menata isi konten dalam kartu agar fleksibel dan bawahnya sejajar */
+.news-card .card-body,
+.news-section .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  padding: 20px !important;
+}
+
+/* 4. Mendorong deskripsi paragraf agar selalu mengisi sisa ruang secara rapi */
+.news-card .card-text,
+.news-section .card-text,
+.news-section p {
+  flex-grow: 1 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 5. MEMINDAHKAN TITIK-TITIK (PAGINATION DOTS) KELUAR DARI KARTU */
+.news-section .swiper-pagination,
+.news-section .swiper-pagination-bullets {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 30px !important; /* Memberi jarak aman 30px di bawah kartu */
+  z-index: 10 !important;
+}
+/* ==========================================================================
+   FIX KARTU BERITA & ACARA SERAGAM (SAMA TINGGI & GAMBAR SAMA RATA)
+   ========================================================================== */
+
+/* 1. Paksa Swiper Wrapper & Slide agar semua anak slide sama tinggi */
+.news-section .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important; /* Memaksa semua kolom slide ditarik sama tinggi */
+}
+
+.news-section .swiper-slide {
+  height: auto !important; /* Agar height mengikuti slide tertinggi */
+  display: flex !important;
+}
+
+/* 2. Paksa Card di dalam slide mengisi 100% tinggi slide */
+.news-section .card,
+.news-section .news-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+/* 3. Kunci tinggi gambar agar semua foto berukuran sama rata tanpa distorsi */
+.news-section .card-img-top,
+.news-section .news-card img {
+  width: 100% !important;
+  height: 180px !important; /* Ukuran tinggi foto dikunci seragam */
+  object-fit: cover !important; /* Foto tidak akan terdistorsi / gepeng */
+  flex-shrink: 0 !important;
+}
+
+/* 4. Atur isi kartu (Body) agar mendorong teks ke bawah secara seimbang */
+.news-section .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  padding: 20px !important;
+}
+
+.news-section .card-title,
+.news-section h5 {
+  min-height: 48px !important; /* Memastikan ruang judul 2 baris seragam */
+  margin-bottom: 8px !important;
+}
+
+.news-section .card-text {
+  flex-grow: 1 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 5. Memindahkan Pagination Dots jauh di bawah kartu agar tidak menimpa */
+.news-section .swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+  margin-top: 25px !important;
+}
+/* ==========================================================================
+   FORCE EQUAL HEIGHT FOR SWIPER CARDS (PAKSA SAMA TINGGI TOTAL)
+   ========================================================================== */
+
+/* 1. Kunci container utama swiper */
+.news-section .swiper,
+.news-section .swiper-container {
+  overflow: hidden !important;
+  padding-bottom: 45px !important; /* Memberi ruang khusus di bawah untuk pagination dots */
+}
+
+/* 2. Paksa wrapper ditarik sama tinggi dari atas ke bawah */
+.news-section .swiper-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important; /* Menarik semua slide sejajar tinggi maksimum */
+  height: auto !important;
+}
+
+/* 3. Paksa setiap slide mengambil height 100% dari wrapper */
+.news-section .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* 4. Paksa elemen Card di dalam slide mengisi full container */
+.news-section .swiper-slide > .card,
+.news-section .swiper-slide > .news-card {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+/* 5. Kunci tinggi gambar agar seragam */
+.news-section .card-img-top,
+.news-section .news-card img {
+  height: 190px !important;
+  min-height: 190px !important;
+  max-height: 190px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 6. Atur Card Body agar teks paragraf fleksibel mengisi sisa ruang */
+.news-section .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  justify-content: flex-start !important;
+}
+
+.news-section .card-text {
+  margin-top: auto !important; /* Mendorong paragraf agar garis bawah kartu sejajar */
+}
+
+/* 7. Geser pagination dots ke paling bawah luar kartu */
+.news-section .swiper-pagination {
+  bottom: 0 !important;
+}
+/* PAKSA CARD BERITA SAMA TINGGI & GAMBAR KONSISTEN */
+.news-section .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.news-section .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+}
+
+.news-section .news-card,
+.news-section .card {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.news-section .card-img-top,
+.news-section img {
+  height: 180px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+.news-section .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.news-section .card-text {
+  margin-top: auto !important;
+}
+
+.news-section .swiper-pagination {
+  position: relative !important;
+  margin-top: 25px !important;
+  bottom: 0 !important;
+}
+/* ==========================================================================
+   FORCE SWIPER NEWS CARDS SEJAJAR & SAMA TINGGI 100%
+   ========================================================================== */
+
+/* 1. Paksa Swiper Wrapper menggunakan Flexbox Stretch */
+.news-section .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important; /* Menarik seluruh slide ke bawah menyamai kartu tertinggi */
+  height: auto !important;
+}
+
+/* 2. Setiap Slide mengambil height 100% dari wrapper */
+.news-section .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Paksa Card di dalam slide mengisi full 100% height */
+.news-section .news-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  margin-bottom: 0 !important;
+}
+
+/* 4. Kunci tinggi gambar seragam agar foto tidak gepeng */
+.news-section .news-card .news-img,
+.news-section .news-card img {
+  height: 180px !important;
+  min-height: 180px !important;
+  max-height: 180px !important;
+  object-fit: cover !important;
+  width: 100% !important;
+}
+
+/* 5. Mendorong isi paragraf agar batas bawah kartu sejajar */
+.news-section .news-card .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.news-section .news-card .card-text {
+  margin-top: auto !important; /* Mendorong teks ke batas paling bawah */
+}
+
+/* 6. Posisikan titik-titik pagination di bawah kartu tanpa menimpa */
+.news-section .swiper-pagination {
+  position: relative !important;
+  margin-top: 25px !important;
+  bottom: 0 !important;
+}
+/* ==========================================================================
+   MEMANGKAS JARAK / SPACE KOSONG ANTARA FAQ DAN SEKSI KONTAK
+   ========================================================================== */
+
+/* 1. Kurangi padding bawah pada section FAQ */
+#faq,
+.faq.section {
+  padding-bottom: 20px !important; /* Bawaan template biasanya 60px-80px */
+  margin-bottom: 0 !important;
+}
+
+/* 2. Kurangi padding atas pada section Kontak */
+#contact,
+.contact.section {
+  padding-top: 25px !important; /* Mengurangi ruang putih di atas judul 'Kontak' */
+  margin-top: 0 !important;
+}
+
+/* 3. Memastikan elemen di dalam FAQ tidak menyisa margin bawah berlebih */
+#faq .container,
+#faq .row,
+#faq .faq-container {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
 </style>

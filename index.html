@@ -58,9 +58,10 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
   <!-- Tag <a> tunggal dengan class me-auto -->
-  <a href="index.html" class="logo d-flex align-items-center me-auto">
-    <img src="assets/img/hydro logo.png" alt="PT Hydrocolloid Indonesia" style="max-height: 100px;">
-  </a>
+ <!-- KODE BARU (MURNI GAMBAR TANPA REFRESH) -->
+<div class="logo d-flex align-items-center me-auto">
+  <img src="assets/img/hydro logo.png" alt="PT Hydrocolloid Indonesia">
+</div>
 
         <nav id="navmenu" class="navmenu">
           <ul>
@@ -468,7 +469,7 @@
       <div class="service-item d-flex position-relative h-100 cursor-pointer" onclick="openProductModal('jelly')">
         <i class="bi bi-egg-fried icon flex-shrink-0"></i>
         <div>
-          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Cemilan & Makanan Manis</a></h4>
+          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Aplikasi Cemilan & Makanan Manis</a></h4>
           <p class="description">Formulasi ideal untuk pembentukan gel transparan yang kokoh dan elastis pada produk jeli, agar-agar, permen kenyal, dan puding.</p>
         </div>
       </div>
@@ -490,7 +491,7 @@
       <div class="service-item d-flex position-relative h-100 cursor-pointer" onclick="openProductModal('pharma')">
         <i class="bi bi-heart-pulse icon flex-shrink-0"></i>
         <div>
-          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Kesehatan & Kecantikan</a></h4>
+          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Apliasi Kesehatan & Kecantikan</a></h4>
           <p class="description">Bahan pengental dan penstabil alami untuk kapsul lunak (farmasi), pasta gigi, krim wajah, dan lotion perawatan diri.</p>
         </div>
       </div>
@@ -501,7 +502,7 @@
       <div class="service-item d-flex position-relative h-100 cursor-pointer" onclick="openProductModal('petfood')">
         <i class="bi bi-gear icon flex-shrink-0"></i>
         <div>
-          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Industri Makanan Hewan</a></h4>
+          <h4 class="title"><a href="javascript:void(0)" class="stretched-link">Aplikasi Industri Makanan Hewan</a></h4>
           <p class="description">Solusi karagenan <strong>custom blend</strong> efisien untuk pengental makanan hewan (<strong>pet food</strong>) serta berbagai formulasi teknis industri.</p>
         </div>
       </div>
@@ -972,17 +973,19 @@
     </section><!-- /Portfolio Section -->
 
   <!-- News & Events Section -->
-<section id="news" class="news section">
+<!-- News & Events Section -->
+<section id="news" class="news-section section py-5">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Berita &amp; Acara</h2>
-    <p>Informasi terbaru mengenai partisipasi pameran, event industri, dan perkembangan PT Hydrocolloid Indonesia.</p>
+    <h2 class="fw-bold" style="color: #00728f;">Berita &amp; Acara</h2>
+    <p class="text-secondary small">Informasi terbaru mengenai partisipasi pameran, event industri, dan perkembangan PT Hydrocolloid Indonesia.</p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-    <div class="swiper init-swiper">
+    <!-- Swiper Container (Tanpa data-aos di dalam sini agar tinggi flexbox tidak rusak) -->
+    <div class="swiper init-swiper news-swiper">
       <script type="application/json" class="swiper-config">
         {
           "loop": true,
@@ -990,7 +993,9 @@
           "autoplay": {
             "delay": 5000
           },
-          "slidesPerView": "auto",
+          "autoHeight": false,
+          "slidesPerView": 3,
+          "spaceBetween": 20,
           "pagination": {
             "el": ".swiper-pagination",
             "type": "bullets",
@@ -999,7 +1004,7 @@
           "breakpoints": {
             "320": {
               "slidesPerView": 1,
-              "spaceBetween": 30
+              "spaceBetween": 15
             },
             "768": {
               "slidesPerView": 2,
@@ -1012,6 +1017,7 @@
           }
         }
       </script>
+
       <div class="swiper-wrapper">
 
         <!-- News Item 1 -->
@@ -1291,43 +1297,65 @@
 
 </div>
 
-  <!-- Faq Section -->
+ <!-- Faq Section -->
 <section id="faq" class="faq section light-background py-5">
 
   <div class="container">
 
     <div class="row gy-4">
 
-      <!-- KOLOM KIRI (DESKRIPSI + SUPPORT CARD AGAR TIDAK KOSONG) -->
+      <!-- KOLOM KIRI (DESKRIPSI + CARD SUPPORT LENGKAP) -->
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="content px-xl-2">
           
-          <!-- Judul Rapi Tanpa Menumpuk -->
+          <!-- Judul Utama (Sesuai Asli Tanpa Diubah) -->
           <h3 class="fw-bold mb-3" style="color: #00728f;">
             Pertanyaan yang Sering <span style="color: #7aa732;">Ditanyakan</span>
           </h3>
           
-          <p class="text-secondary small mb-4 text-justify">
+          <p class="text-secondary small mb-4 text-justify" style="font-size: 0.875rem; color: #555555;">
             Temukan jawaban atas pertanyaan yang sering diajukan mengenai produk Semi Refined Carrageenan (SRC), standar kualitas, dan sistem pemesanan di PT Hydrocolloid Indonesia.
           </p>
 
-          <!-- CARD BANTUAN TAMBAHAN (MENGISI AREA KOSONG) -->
-          <div class="p-4 bg-white rounded-4 border shadow-sm mb-3">
+          <!-- CARD BANTUAN DENGAN INFO TAMBAHAN (MENGISI RUANG KOSONG) -->
+          <div class="p-4 bg-white rounded-4 border shadow-sm">
+            
+            <!-- Header Card Bantuan -->
             <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="p-2 rounded-circle text-white d-flex align-items-center justify-content-center" style="background-color: #00728f; width: 40px; height: 40px;">
+              <div class="p-2 rounded-circle text-white d-flex align-items-center justify-content-center flex-shrink-0" style="background-color: #00728f; width: 42px; height: 42px;">
                 <i class="bi bi-headset fs-5"></i>
               </div>
               <div>
-                <h6 class="fw-bold text-dark mb-0">Butuh Bantuan Lain?</h6>
-                <span class="text-muted extra-small">Tim Sales & Technical Support</span>
+                <h6 class="fw-bold mb-0" style="color: #00728f; font-size: 0.95rem;">Butuh Bantuan Lain?</h6>
+                <span class="small" style="color: #6c757d; font-size: 0.8rem;">Tim Sales & Technical Support</span>
               </div>
             </div>
-            <p class="text-secondary extra-small mb-3" style="font-size: 0.8rem;">
+
+            <p class="small mb-3" style="font-size: 0.825rem; color: #555555; line-height: 1.5;">
               Tidak menemukan jawaban yang Anda cari? Tim spesialis aplikasi hidrokoloid kami siap membantu formulasi produk Anda.
             </p>
-            <a href="#contact" class="btn btn-sm text-white w-100 rounded-3 py-2 fw-semibold" style="background-color: #7aa732;">
-              <i class="bi bi-envelope me-1"></i> Hubungi Tim Kami
+
+            <!-- Quick Contact Info Tambahan (Penyeimbang Tinggi) -->
+            <div class="border-top pt-3 mb-3" style="border-color: #e9ecef !important;">
+              <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.8rem; color: #00728f;">
+                <i class="bi bi-clock text-success" style="color: #7aa732 !important;"></i>
+                <span>Senin - Jumat: 08.00 - 17.00 WIB</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 mb-2" style="font-size: 0.8rem; color: #00728f;">
+                <i class="bi bi-envelope-check text-success" style="color: #7aa732 !important;"></i>
+                <span>info@hydrocolloid-indonesia.com</span>
+              </div>
+              <div class="d-flex align-items-center gap-2" style="font-size: 0.8rem; color: #00728f;">
+                <i class="bi bi-geo-alt text-success" style="color: #7aa732 !important;"></i>
+                <span>Pasuruan, Jawa Timur - Indonesia</span>
+              </div>
+            </div>
+
+            <!-- Tombol Action -->
+            <a href="#contact" class="btn text-white w-100 rounded-3 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2" style="background-color: #7aa732; font-size: 0.875rem; border: none; transition: background-color 0.3s ease;">
+              <i class="bi bi-envelope"></i> Hubungi Tim Kami
             </a>
+
           </div>
 
         </div>
@@ -1340,9 +1368,9 @@
 
           <!-- FAQ Item 1 (Default Terbuka) -->
           <div class="faq-item faq-active">
-            <h3><span class="num">1.</span> <span>Produk apa saja yang dihasilkan oleh PT Hydrocolloid Indonesia?</span></h3>
+            <h3 style="color: #00728f; font-size: 1rem;"><span class="num" style="color: #7aa732;">1.</span> <span>Produk apa saja yang dihasilkan oleh PT Hydrocolloid Indonesia?</span></h3>
             <div class="faq-content">
-              <p>
+              <p style="color: #555555; font-size: 0.875rem;">
                 Kami memproduksi produk karagenan tipe <strong>Semi Refined Carrageenan (SRC)</strong> berkualitas tinggi (seperti merk Hycogel dan Hycovis) dari rumput laut jenis <em>Kappaphycus alvarezii (cottonii)</em> dan <em>Eucheuma denticulatum (spinosum)</em> yang digunakan sebagai pengental, penstabil, dan pembentuk gel pada industri pangan, farmasi, serta perawatan diri.
               </p>
             </div>
@@ -1351,9 +1379,9 @@
 
           <!-- FAQ Item 2 -->
           <div class="faq-item">
-            <h3><span class="num">2.</span> <span>Sertifikasi dan standar kualitas apa saja yang dimiliki perusahaan?</span></h3>
+            <h3 style="color: #00728f; font-size: 1rem;"><span class="num" style="color: #7aa732;">2.</span> <span>Sertifikasi dan standar kualitas apa saja yang dimiliki perusahaan?</span></h3>
             <div class="faq-content">
-              <p>
+              <p style="color: #555555; font-size: 0.875rem;">
                 PT Hydrocolloid Indonesia telah tersertifikasi <strong>ISO 9001:2015, FSSC 22000, HACCP, SKP</strong>, serta memiliki <strong>Sistem Jaminan Halal (100% Produk Halal)</strong> untuk menjamin keamanan pangan dan konsistensi mutu produk di skala nasional maupun internasional.
               </p>
             </div>
@@ -1362,9 +1390,9 @@
 
           <!-- FAQ Item 3 -->
           <div class="faq-item">
-            <h3><span class="num">3.</span> <span>Bagaimana sistem pemesanan produk di PT Hydrocolloid Indonesia?</span></h3>
+            <h3 style="color: #00728f; font-size: 1rem;"><span class="num" style="color: #7aa732;">3.</span> <span>Bagaimana sistem pemesanan produk di PT Hydrocolloid Indonesia?</span></h3>
             <div class="faq-content">
-              <p>
+              <p style="color: #555555; font-size: 0.875rem;">
                 Kami menerapkan sistem <strong>Make To Order (MTO)</strong> untuk pemesanan kuantitas besar yang dapat disesuaikan spesifikasinya (custom formulation), serta sistem <strong>Make To Stock (MTS)</strong> untuk memenuhi kebutuhan produk standar dan pengadaan dalam kuantitas yang lebih kecil secara cepat.
               </p>
             </div>
@@ -1373,9 +1401,9 @@
 
           <!-- FAQ Item 4 -->
           <div class="faq-item">
-            <h3><span class="num">4.</span> <span>Apakah PT Hydrocolloid Indonesia melayani pengiriman ekspor luar negeri?</span></h3>
+            <h3 style="color: #00728f; font-size: 1rem;"><span class="num" style="color: #7aa732;">4.</span> <span>Apakah PT Hydrocolloid Indonesia melayani pengiriman ekspor luar negeri?</span></h3>
             <div class="faq-content">
-              <p>
+              <p style="color: #555555; font-size: 0.875rem;">
                 Ya, sebanyak 80% dari total produksi kami didistribusikan untuk pasar ekspor ke berbagai negara di Asia, Eropa, hingga Amerika. Pengiriman luar negeri diproses hingga ke pelabuhan penyerahan yang disepakati (FOB/CIF).
               </p>
             </div>
@@ -1384,9 +1412,9 @@
 
           <!-- FAQ Item 5 -->
           <div class="faq-item">
-            <h3><span class="num">5.</span> <span>Bagaimana cara mengajukan permintaan sampel atau konsultasi spesifikasi teknis?</span></h3>
+            <h3 style="color: #00728f; font-size: 1rem;"><span class="num" style="color: #7aa732;">5.</span> <span>Bagaimana cara mengajukan permintaan sampel atau konsultasi spesifikasi teknis?</span></h3>
             <div class="faq-content">
-              <p>
+              <p style="color: #555555; font-size: 0.875rem;">
                 Anda dapat menghubungi tim sales & marketing kami melalui formulir kontak di bagian bawah website ini, atau mengirimkan email langsung ke <strong>info@hydrocolloid-indonesia.com</strong> untuk diskusi spesifikasi gel strength, viskositas, dan pengiriman sampel.
               </p>
             </div>
@@ -1402,18 +1430,7 @@
   </div>
 
 </section><!-- End Faq Section -->
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- End Faq Section -->
            
-    </section><!-- /Faq Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1487,19 +1504,19 @@
   <div class="row gy-4">
 
     <div class="col-md-6">
-      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      <input type="text" name="name" class="form-control" placeholder="Nama Anda" required>
     </div>
 
     <div class="col-md-6">
-      <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      <input type="email" name="email" class="form-control" placeholder="Email Anda" required>
     </div>
 
     <div class="col-md-12">
-      <input type="text" name="custom_subject" class="form-control" placeholder="Subject" required>
+      <input type="text" name="custom_subject" class="form-control" placeholder="Subjek" required>
     </div>
 
     <div class="col-md-12">
-      <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+      <textarea name="message" class="form-control" rows="6" placeholder="Pesan" required></textarea>
     </div>
 
     <div class="col-md-12 text-center">
